@@ -38,9 +38,13 @@ public class FeedbackController {
     log.debug("Trying to add feedback: " + feedback);
 
     if(feedback.getRating() < 1 || feedback.getRating() > 10 ) {
+      log.debug("Invalid Data in feedback: rating is " + feedback.getRating()
+        + ", but rating must be 1-10");
       throw new FeedbackInvalidDataException("Rating must be a number 1 - 10");
     }
     if(feedback.getUsername().isEmpty() || feedback.getUsername().equals(null) ) {
+      log.debug("Invalid Data in feedback: username is " + feedback.getUsername()
+        + ", but username can NOT be empty or null");
       throw new FeedbackInvalidDataException("Username is required!");
     }
 
