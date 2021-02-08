@@ -4,7 +4,7 @@ User Feedback is a Java Spring Boot with Hibernate project that will capture use
 
 ## Installation
 
-Use [docker](https://docs.docker.com/get-docker/) to install.
+Use [docker](https://docs.docker.com/get-docker/) for database.
 
 ```bash
 docker-compose --file docker/compose.yaml up --build -d
