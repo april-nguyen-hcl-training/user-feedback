@@ -19,7 +19,7 @@ public class FeedbackExceptionController extends ResponseEntityExceptionHandler 
   }
 
   @ExceptionHandler({ FeedbackInvalidDataException.class })
-  public ResponseEntity<Object> handleBadRequest(Exception ex, WebRequest request) {
+  public ResponseEntity<Object> handleInvalidData(Exception ex, WebRequest request) {
     return handleExceptionInternal(ex, ex.getMessage(),
       new HttpHeaders(), HttpStatus.valueOf(422), request);
   }
